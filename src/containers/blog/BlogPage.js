@@ -75,16 +75,6 @@ class BlogPage extends React.Component{
     }
   }
 
-  renderSocialShare(){
-    return(
-      <HorizontalSocialButtons
-        twitterLink={'http://twitter.com/wesadvance'}
-        facebookLink={'https://facebook.com/wesadvance'}
-        githubLink={'https://github.com/wesvance'}
-        emailLink={'mailto:me@wesvance.com?Subject=Hey Wes!'}/>
-    )
-  }
-
   filterCategoriesByCount(categories){
     if(categories){
       return categories.filter((_category) => _category.count > 0)
@@ -149,18 +139,22 @@ class BlogPage extends React.Component{
     return(
       <div id="BlogPage">
         <Banner
-          topLine={'BUSINESS,'}
-          bottomLine={'CODE & DESIGN'}
-          subtitle={'Weekly'}
-          icon={'fa fa-paper-plane-o'}
+          topLine={'REACT,'}
+          bottomLine={'WORDPRESS'}
+          subtitle={'Starter Kit'}
+          icon={'fa fa-wordpress'}
           />
 
         <div className="blogContainer">
           <div className="container">
             <div className="row">
               <div className="col">
-                 <p>This blog sits at the intersection in the 'magic triangle' of buiness, code and design.
-                These articles highlight the harmony and synergy of this intersection</p>
+                <p>
+                  This is an example Blog page. You can search for posts on the frontend using fuse.js. It will pull posts from any wordpress site you want.
+                </p>
+                <p>
+                  The posts here are pulled from: {process.env.REACT_APP_WORDPRESS_BASE_URL} but can be configured to any WP site.
+                </p>
               </div>
             </div>
             <div className="row">
@@ -184,9 +178,6 @@ class BlogPage extends React.Component{
 
                 <h4>Categories</h4>
                 {this.renderCategories(this.props.categories.allCategories)}
-
-                <h4>Follow Me!</h4>
-                {this.renderSocialShare()}
               </div>
             </div>
           </div>
@@ -196,8 +187,7 @@ class BlogPage extends React.Component{
           <div className="row">
             <div className="col-sm-12 col-md-10 col-lg-9 offset-md-2 offset-lg-3">
               <MailingList
-                header={'Love these articles? I bet you’d love more!'}
-                body={"Helpful, awesome and spam-less articles right to your inbox, every Wednesday - Just for subscribers."}/>
+                body={"React + Wordpress Starter kit is bundled with Mailchimp's API to manage your mailing list!"}/>
             </div>
           </div>
         </div>
@@ -206,13 +196,6 @@ class BlogPage extends React.Component{
   }
 }
 
-// <div className="pageCircle">
-//  <Link to="/posts">
-//    <div className="button">
-//      <i className="fa fa-rss"></i>
-//    </div>
-//  </Link>
-// </div>
 function mapStateToProps(state, ownProps){
   return {
     ui: state.ui,

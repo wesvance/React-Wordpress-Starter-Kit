@@ -92,21 +92,17 @@
   }
 }
 .horizontalSocialContainer{
-  // position: fixed;
-  // bottom: 30px;
-  // left: 3vw;
-  // z-index: 9;
   .button{
-    // width: 50px;
-    // height: 155px;
-    width: 190px;
     border-radius: 5px;
     box-shadow: $standard-shadow;
     text-align: center;
     background: white !important;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
     max-height: 55px;
+    max-width: 210px;
     .fa{
       padding-left: 10px;
       padding-right: 10px;

@@ -257,22 +257,26 @@ class PostPage extends React.Component{
   }
   displayAuthor(post){
     if(post && post._embedded && post._embedded.author){
-      let author = post._embedded.author[0];
-      return(
-        <div className="authorSection">
-          <div className="row">
-            <div className="col-12 col-sm-3 col-md-2 authorAvatar">
-              <img src={author.avatar_urls['96']} className="img-circle" alt='Author Avatar'/>
-            </div>
-            <div className="col-12 col-sm-9 col-md-10 authorBody">
-              <a href={author.url}>
-                <h2>{author.name}</h2>
-              </a>
-              <h5>{author.description}</h5>
+      if(post._embedded.author.id){
+        let author = post._embedded.author[0];
+        return(
+          <div className="authorSection">
+            <div className="row">
+              <div className="col-12 col-sm-3 col-md-2 authorAvatar">
+                <img src={author.avatar_urls['96']} className="img-circle" alt='Author Avatar'/>
+              </div>
+              <div className="col-12 col-sm-9 col-md-10 authorBody">
+                <a href={author.url}>
+                  <h2>{author.name}</h2>
+                </a>
+                <h5>{author.description}</h5>
+              </div>
             </div>
           </div>
-        </div>
-      )
+        )
+      }else{
+        return ''
+      }
     }else{
       // SHADOW ELEMENT
       return(
@@ -658,8 +662,7 @@ class PostPage extends React.Component{
           <div className="row">
             <div className="col-sm-12 col-md-10 col-lg-9 offset-md-2 offset-lg-3">
               <MailingList
-                header={'Love this article? I bet you’d love more!'}
-                body={"Helpful, awesome and spam-less articles right to your inbox, every Wednesday - Just for subscribers."}/>
+                body={"React + Wordpress Starter kit is bundled with Mailchimp's API to manage your mailing list!"}/>
             </div>
           </div>
         </div>
