@@ -10,10 +10,10 @@ import HorizontalSocialButtons from '../common/HorizontalSocialButtons';
 import Apollo from '../../assets/images/logos/apollo.png';
 import FreelanceAfternoon from '../../assets/images/logos/freelanceafternoon.png';
 import Launch from '../../assets/images/logos/launch.png';
-import SonyAlpha from '../../assets/images/logos/sonyalpha.png';
-import TechBreakfast from '../../assets/images/logos/techbreakfast.png';
+// import SonyAlpha from '../../assets/images/logos/sonyalpha.png';
+// import TechBreakfast from '../../assets/images/logos/techbreakfast.png';
 import TechTrivia from '../../assets/images/logos/techtrivia.png';
-import ClientPortal from '../../assets/images/logos/clientportal.png';
+// import ClientPortal from '../../assets/images/logos/clientportal.png';
 
 class AboutPage extends React.Component{
   constructor(props, context){

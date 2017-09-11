@@ -9,7 +9,7 @@ import * as categoryActions from '../../actions/categoryActions';
 import Fuse from 'fuse.js'; // PROVIDES FUZZY SEARCH
 import TextInput from '../common/form/TextInput';
 import SkeletonBox from '../common/skeleton/SkeletonBox';
-import HorizontalSocialButtons from '../common/HorizontalSocialButtons';
+// import HorizontalSocialButtons from '../common/HorizontalSocialButtons';
 import Banner from '../common/Banner';
 import MailingList from '../common/MailingList';
 import Posts from './post/Posts';
@@ -83,7 +83,7 @@ class BlogPage extends React.Component{
 
   filterPostsByActiveCategory(posts, activeCategories){
     if(posts && activeCategories){
-      let activeCategoriesIDArray = activeCategories.map(category => {return category.id})
+      // let activeCategoriesIDArray = activeCategories.map(category => {return category.id})
       // let filteredPosts = posts.map(post => {
       //   if(post._embedded && post._embedded['wp:term']){
       //     let postCategories = post._embedded['wp:term'][0];
